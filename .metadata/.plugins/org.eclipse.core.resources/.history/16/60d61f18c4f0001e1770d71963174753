@@ -1,0 +1,50 @@
+package com.stl.app.restApi.model;
+
+public class User {
+    private String firstName;
+    private String lastName;
+    private String occupation;
+    private Integer age;
+    private PermanentAddress permanentAddress;
+    private CurrentAddress currentAddress;
+    public String getFirstName() {
+        return firstName;
+    }
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+    public String getLastName() {
+        return lastName;
+    }
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+    public String getOccupation() {
+        return occupation;
+    }
+    public void setOccupation(String occupation) {
+        this.occupation = occupation;
+    }
+    public Integer getAge() {
+        return age;
+    }
+    public void setAge(Integer age) {
+        this.age = age;
+    }
+    public PermanentAddress getPermanentAddress() {
+        return permanentAddress;
+    }
+    public void setPermanentAddress(PermanentAddress permanentAddress) {
+        this.permanentAddress = permanentAddress;
+    }
+    public CurrentAddress getCurrentAddress() {
+        return currentAddress;
+    }
+    public void setCurrentAddress(CurrentAddress currentAddress) {
+        this.currentAddress = currentAddress;
+    }
+}
+
+
+
+

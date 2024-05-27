@@ -1,0 +1,84 @@
+package org.SortedArray;
+
+import java.util.Arrays;
+
+public class SortedArray 
+{
+	
+    public static int search(int[] arr, int x)
+    {
+        int left = 0;
+        int right = arr.length - 1;
+        System.out.println("right: "+right);
+        
+        while (left <= right)
+        {
+            int mid = left + (right - left) / 2;
+            System.out.println(left + (right - left) / 2 + "mid value");
+            System.out.println("mid: "+mid);
+            if (arr[mid] == x) 
+            {
+                return mid; 
+            } 
+            else if (arr[mid] < x) 
+            {
+                left = mid + 1; 
+                System.out.println("left: "+left);
+            } 
+            else 
+            {
+                right = mid - 1; 
+            }
+        }
+        
+        return -1; 
+    }
+    
+       public static int[] insert(int[] arr, int x)
+       {
+        int index = Arrays.binarySearch(arr, x);
+        
+        if (index < 0) 
+        {
+            index = index = -index - 1; 
+        }
+        
+        int[] newArr = new int[arr.length + 1];
+        System.arraycopy(arr, 0, newArr, 0, index);
+        newArr[index] = x;
+        System.arraycopy(arr, index, newArr, index + 1, arr.length - index);
+        
+        return newArr;
+    }
+   
+    public static int[] delete(int[] arr, int x) 
+    {
+        int index = Arrays.binarySearch(arr, x);
+        
+        if (index >= 0) 
+        {
+            int[] newArr = new int[arr.length - 1];
+            System.arraycopy(arr, 0, newArr, 0, index);
+            System.arraycopy(arr, index + 1, newArr, index, arr.length - index - 1);
+            return newArr;
+        }
+        
+        return arr; 
+    }
+    
+ 
+    public static void main(String[] args) 
+    {
+        int[] arr = {2, 5, 7, 10, 15};
+        System.out.println("Array: " + Arrays.toString(arr));
+        
+        int index = search(arr, 10);
+        System.out.println("Index of 10: " + index);
+        
+        arr = insert(arr, 8);
+        System.out.println("Array after insertion: " + Arrays.toString(arr)); 
+        
+        arr = delete(arr, 7);
+        System.out.println("Array after deletion: " + Arrays.toString(arr)); 
+    }
+}

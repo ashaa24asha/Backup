@@ -1,0 +1,18 @@
+package org.ReverseAnArray;
+
+public class ReverseAnArrayUsingTwoPointerApproach {
+	public static void main(String[] args)
+	{
+		int[] originalArr = {1,2,3,4};
+		System.out.println("Original Array is : " + originalArr);
+		
+		System.out.println(reverseArray(originalArr));
+	}
+	public static void reverseArray(int[] originalArr)
+	{
+		int start = 0;
+		
+	}
+	
+
+}

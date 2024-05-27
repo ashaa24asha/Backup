@@ -1,0 +1,14 @@
+package com.stl.example;
+
+import java.util.List;
+import java.util.Scanner;
+
+public class StudentUtility 
+{
+	public static Student addStudent(List<Student> students)
+	{
+		Scanner sc = new Scanner(System.in);
+		return null;
+		
+	}
+}

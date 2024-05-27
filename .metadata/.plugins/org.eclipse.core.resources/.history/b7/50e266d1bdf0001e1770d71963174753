@@ -1,0 +1,22 @@
+package com.stl;
+
+import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+
+public class Test {
+    public static void main(String[] args) {
+        String str = "hello";
+
+        // Convert string to character stream, filter characters with count > 1, and collect them into a map
+        Map<Character, Long> charCountMap = str.chars()
+                .mapToObj(c -> (char) c)
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+
+        // Print duplicate characters
+        System.out.println("Duplicate characters:");
+        charCountMap.entrySet().stream()
+                .filter(entry -> entry.getValue() > 1)
+                .forEach(entry -> System.out.println(entry.getKey()));
+    }
+}

@@ -1,0 +1,33 @@
+package com.stl.example;
+
+import java.util.Scanner;
+
+public class StudentDatabase {
+	
+	private String fname;
+	private String lname;
+	private int gradeYear;
+	private String studentId;
+	private String courses = "";
+	private int tutionBalance = 0;
+	private int costOfCourse = 600;
+	private static int id = 1000;
+	
+	public StudentDatabase()
+	{
+		Scanner in = new Scanner(System.in);
+		System.out.println("Enter first name:");
+		this.fname = in.nextLine();
+		
+		System.out.println("Enter last name");
+		this.lname = in.nextLine();
+		
+		System.out.println("1: Freshmore \n 2: Sophomore \n 3: Junior \n 4: Senior \n 5: Enter class level");
+		this.gradeYear = in.next();
+		
+	}
+	
+	
+	
+
+}

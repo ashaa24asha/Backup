@@ -1,0 +1,22 @@
+package com.stl.example;
+
+public class StudentDatabase {
+	
+	private String fname;
+	private String lname;
+	private int gradeYear;
+	private String studentId;
+	private String courses = "";
+	private int tutionBalance = 0;
+	private int costOfCourse = 600;
+	private static int id = 1000;
+	
+	public Student()
+	{
+		
+	}
+	
+	
+	
+
+}

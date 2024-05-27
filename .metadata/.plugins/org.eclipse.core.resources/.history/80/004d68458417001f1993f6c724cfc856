@@ -1,0 +1,51 @@
+package com.stl.example;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class StudentTest {
+	
+	public static void main(String[] args)
+	{
+		StudentDatabase stu = new StudentDatabase();
+		stu.enroll();
+		
+		
+		
+		
+		
+		
+		
+		Scanner sc = new Scanner(System.in);
+		List<Student> studentList = new ArrayList<Student>();
+		while(true)
+		{
+			System.out.println("Student Management");
+			System.out.println(""
+					+ "1: Add Student\n"
+					+ "2: Update Student\n"
+					+ "3: Display Students\n"
+					+ "4: Delete Student\n"
+					+ "5: Exit\n");
+			System.out.println("Please select the option");
+			int option = sc.nextInt();
+			switch(option)
+			{
+			case 1: 
+				Student stud = StudentUtility.addStudent(studentList);
+				studentList.add(stud);
+				System.out.println("Student Added Successfully");
+				break;
+			case 2:
+				break;
+			case 5:
+				System.exit(0);
+				break;
+				default:
+					System.err.print("Please enter the correct option");
+			}
+		}
+				
+	}
+}

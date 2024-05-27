@@ -1,0 +1,40 @@
+package com.stl.example;
+
+public class BankAccount {
+	String Onwer;
+	double balance;
+	public String getOnwer() {
+		return Onwer;
+	}
+	public void setOnwer(String onwer) {
+		Onwer = onwer;
+	}
+	public double getBalance() {
+		return balance;
+	}
+	public void setBalance(double balance) {
+		this.balance = balance;
+	}
+	
+	
+	public void withDraw(int withDrawAmount)
+	{
+		if(withDrawAmount > balance)
+		{
+			System.out.println("Unable to withdraw Amount as the entered amount is more than the Balance amount: "+ balance);
+		}
+		else
+		this.balance = withDrawAmount - balance;
+	}
+	
+	public void deposit(int depositAmount)
+	{
+		this.balance = depositAmount + balance;
+	}
+	public BankAccount(String onwer, double balance) {
+		super();
+		Onwer = onwer;
+		this.balance = balance;
+	}
+	
+}

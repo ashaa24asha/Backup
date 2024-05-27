@@ -1,0 +1,11 @@
+package com.stl.example;
+
+import java.util.List;
+
+public class StudentUtility 
+{
+	public static Student addStudent(List<Student> students)
+	{
+		
+	}
+}

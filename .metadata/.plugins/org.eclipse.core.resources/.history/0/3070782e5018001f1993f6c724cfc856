@@ -1,0 +1,29 @@
+package SingletonExample.SingletonExample;
+
+/**
+ * Hello world!
+ *
+ */
+public class ContactDAO 
+{
+	public ContactDAO(){
+		
+	}
+	
+	private static ContactDAO contactDAO = null;
+	
+	private static ContactDAO getInstance()
+	{
+		if(contactDAO == null)
+		{
+			contactDAO = new ContactDAO();
+		}
+		return contactDAO;
+
+	}
+    public static void main( String[] args )
+    {
+        ContactDAO obj1 = ContactDAO.getInstance();
+        
+    }
+}

@@ -1,0 +1,36 @@
+package com.stl.app.restApi.Service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.stl.app.restApi.model.Address;
+import com.stl.app.restApi.model.User;
+import com.stl.app.restApi.repo.UserRepo;
+
+@Service
+public class UserService {
+	@Autowired
+    private UserRepo userRepository;
+
+    public List<User> getAllUsers() {
+        return userRepository.findAll();
+    }
+    public User createUser(User userRequest) {
+        User newUser = new User();
+        newUser.setFirstName(userRequest.getFirstName());
+        newUser.setLastName(userRequest.getLastName());
+        newUser.setOccupation(userRequest.getOccupation());
+        newUser.setAge(userRequest.getAge());
+
+        Address addressRequest = userRequest.getAddress();
+        if (addressRequest != null) {
+            newUser.setPermanentAddress(addressRequest.getPermanentAddress());
+            newUser.setCurrentAddress(addressRequest.getCurrentAddress());
+        }
+
+        return userRepository.save(newUser);
+    }
+
+}

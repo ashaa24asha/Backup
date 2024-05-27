@@ -1,0 +1,29 @@
+package com.stl.example;
+
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		//int input = sc.nextInt();
+		String stringInput = sc.next();
+		
+		int length = stringInput.length();
+		System.out.println(length);
+		
+		for(int i = length;i <= 1;i++)
+		{
+			char rev = stringInput.charAt(i);
+			System.out.println(rev);
+		}
+		
+		
+		
+//		//Using String Buffer
+//		StringBuffer sb = new StringBuffer(String.valueOf(input));
+//		//String.valueOf will convert our number into String format and pass that value to String buffer constructor ,that string value will be stored inside this sb(String buffer variable)
+//		StringBuffer rev = sb.reverse();
+//		System.out.println("Reversed String is : "+rev);
+		
+	}
+}

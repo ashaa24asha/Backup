@@ -1,0 +1,30 @@
+package com.stl.example;
+
+public class BirthdayCake {
+	
+	public String flavour;
+	public double fields;
+	
+	
+	
+	public BirthdayCake(String flavour, double fields) {
+		super();
+		this.flavour = flavour;
+		this.fields = fields;
+	}
+	public String getFlavour() {
+		return flavour;
+	}
+	public void setFlavour(String flavour) {
+		this.flavour = flavour;
+	}
+	public double getFields() {
+		return fields;
+	}
+	public void setFields(double fields) {
+		this.fields = fields;
+	}
+	
+	
+
+}

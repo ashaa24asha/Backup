@@ -1,0 +1,30 @@
+package com.example;
+
+import java.util.ArrayList;
+import java.util.List;
+
+	
+public class Test2 {
+	
+
+public static void main(String[] Args)
+{
+	List names = new ArrayList();
+	names.add("Abc");
+	names.add("def");
+	String c = (String) names.get(1);
+	System.out.println(c);
+	names.add(7);
+	Object d = names.get(1);
+	System.out.println(d);
+	
+	List<String> names1 = new ArrayList();
+	names1.add("abc");
+	String res = names1.get(0);
+	System.out.println(res);
+	
+	
+}
+
+
+}

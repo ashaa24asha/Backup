@@ -1,0 +1,13 @@
+package com.stl.app.restApi.model;
+
+import jakarta.persistence.Embeddable;
+
+@Embeddable
+public class Address {
+	private int houseNumber;
+    private String road;
+    private String city;
+    private String state;
+    private int pincode;
+
+}

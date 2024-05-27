@@ -1,0 +1,17 @@
+package com.stl.example;
+
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int input = sc.nextInt();
+		//Using String Buffer
+		StringBuffer rev;
+		StringBuffer sb = new StringBuffer(String.valueOf(input));
+		//String.valueOf will convert our number into String format,that string value will be stored inside this sb(String buffer variable)
+		rev = sb.reverse();
+		System.out.println("Reversed String is : "+rev);
+		
+	}
+}

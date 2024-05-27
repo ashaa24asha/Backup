@@ -1,0 +1,13 @@
+package org.SortedArray;
+
+/**
+ * Hello world!
+ *
+ */
+public class SortedArray 
+{
+    public static void main( String[] args )
+    {
+        System.out.println( "Hello World!" );
+    }
+}

@@ -1,0 +1,7 @@
+package PizzaExample.PizzaExample;
+
+public class DeluxPizza extends Pizza
+{
+	
+
+}

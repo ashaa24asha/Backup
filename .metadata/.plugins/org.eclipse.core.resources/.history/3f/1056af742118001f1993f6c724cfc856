@@ -1,0 +1,46 @@
+package PizzaExample.PizzaExample;
+
+public class Pizza {
+	
+	private int price;
+	private boolean veg;
+	private int toppingsPrice = 20;
+	private int extraCheesePrice = 30;
+	private int takeAwayPrice = 20;
+	
+	public Pizza(Boolean veg)
+	{
+		if(veg == true)
+		{
+			this.price = 300;
+		}
+		else
+		{
+			this.price = 400;
+		}
+	}
+	
+	public void getPizzaPrice()
+	{
+		System.out.println(this.price);
+	}
+	
+	public void addExtraToppings()
+	{
+		int extraToppings = this.price + toppingsPrice;
+		System.out.println("extraToppings Added: "+extraToppings);
+	}
+	
+	public void addCheese()
+	{
+		int extraToppings = this.price + extraCheesePrice;
+		System.out.println("extraToppings Added: "+extraToppings);
+	}
+	public void takeAway()
+	{
+		int extraToppings = this.price + takeAwayPrice;
+		System.out.println("takeAwayPrice Added: "+takeAwayPrice);
+	}
+	
+
+}

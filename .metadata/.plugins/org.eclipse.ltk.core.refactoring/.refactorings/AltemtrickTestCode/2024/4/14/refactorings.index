@@ -1,0 +1,31 @@
+1711990532521	Rename resource 'application2.properties'
+1711990537496	Delete element
+1711991386391	Delete element
+1712042973025	Delete element
+1712043285489	Delete element
+1712132455429	Delete element
+1712134203642	Delete element
+1712134206953	Delete element
+1712134210357	Delete element
+1712134220127	Delete element
+1712134223579	Delete element
+1712134227541	Delete element
+1712157794340	Rename package 'com.stl.app.restApi'
+1712157814615	Rename package 'com.source.app.restApi'
+1712157871121	Rename package 'com.general.app.restApi'
+1712157890793	Rename package 'com.stl.app.restApi.Controller'
+1712160827875	Rename package 'com.stl.app.restApi.model'
+1712160842799	Rename package 'com.stl.app.restApi.repo'
+1712160854606	Rename package 'com.stl.app.restApi.Service'
+1712161230795	Copy package
+1712163472615	Rename package 'com.example.app.restApi'
+1712163493223	Rename package 'com.example.app.restApi.Controller'
+1712163506295	Rename package 'com.example.app.restApi.Service'
+1712163520077	Rename package 'com.example.app.restApi.repo'
+1712163532139	Rename package 'com.example.app.restApi.model'
+1712163549615	Rename package 'com.example.app.restApi.exception'
+1712163563941	Rename package 'com.example.app.apigateway.config'
+1712163867295	Rename package 'com.example.authservice.Service'
+1712163877899	Rename package 'com.example.authservice.exception'
+1712163889512	Rename package 'com.example.authservice.exceptionHangling'
+1712163931717	Delete element

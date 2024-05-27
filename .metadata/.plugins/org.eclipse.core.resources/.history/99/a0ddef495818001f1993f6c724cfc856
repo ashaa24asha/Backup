@@ -1,0 +1,19 @@
+What is Singleton
+
+Singleton class means the class which is allowed to create only one object is nothing but a singleton class.
+Singleton class is such a class which can provide you only one instance or a single object throughout the whole life cycle of that particular class
+ if you try to create another object it will point you to the same previous instance which was initially created so that means you can only have only one instance in this particular class .
+That means It restricts the unneccessary creation of an objects.
+It uses the existing object instead of ceating new object so because of this it saves memory.
+
+How to create a Singleton class?
+There are 3 steps to create a Singleton class
+Step 1: Declare a static data member which is a instance of singleton class
+Step 2: Create a private contructor which restrict to create instance of a singleton class
+Step 3: Create Static factory method which allows to create and access the objects.
+and it will restrict to create more than one object.
+
+Advantages of Singleton Class:
+It saves memory because it allows us to create only one object.
+In Java creating Object is costly because every time we create an object the memory is allocated in JVM.
+But in case of Singleton class we can cerate only one object of the class.

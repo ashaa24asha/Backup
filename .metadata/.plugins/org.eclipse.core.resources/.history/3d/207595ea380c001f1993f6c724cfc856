@@ -1,0 +1,62 @@
+package org.UnsortedArray;
+
+/**
+ * Hello world!
+ *
+ */
+public class UnsortedArray 
+{
+	// Search operation
+    public static int search(int[] arr, int x) {
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == x) {
+                return i; // Return index if element found
+            }
+        }
+        return -1; // Return -1 if element not found
+    }
+    
+    // Insert operation
+    public static void insert(int[] arr, int x) {
+        int n = arr.length;
+        int[] newArr = new int[n + 1]; // Create a new array with increased size
+        for (int i = 0; i < n; i++) {
+            newArr[i] = arr[i]; // Copy elements from old array to new array
+        }
+        newArr[n] = x; // Insert new element at the end
+        arr = newArr; // Update reference to new array
+    }
+    
+    // Delete operation
+    public static void delete(int[] arr, int x) {
+        int n = arr.length;
+        int[] newArr = new int[n - 1]; // Create a new array with decreased size
+        int idx = search(arr, x); // Find index of element to delete
+        if (idx != -1) {
+            for (int i = 0, j = 0; i < n; i++) {
+                if (i != idx) {
+                    newArr[j++] = arr[i]; // Copy elements except the one to be deleted
+                }
+            }
+            arr = newArr; // Update reference to new array
+        }
+    }
+    
+    // Main method for testing
+    public static void main(String[] args) {
+        int[] arr = {3, 7, 2, 10, 5};
+        System.out.println("Array: " + java.util.Arrays.toString(arr));
+        
+        // Searching for an element
+        int index = search(arr, 10);
+        System.out.println("Index of 10: " + index); // Output: 3
+        
+        // Inserting an element
+        insert(arr, 8);
+        System.out.println("Array after insertion: " + java.util.Arrays.toString(arr)); // Output: [3, 7, 2, 10, 5, 8]
+        
+        // Deleting an element
+        delete(arr, 7);
+        System.out.println("Array after deletion: " + java.util.Arrays.toString(arr)); // Output: [3, 2, 10, 5, 8]
+    }
+}

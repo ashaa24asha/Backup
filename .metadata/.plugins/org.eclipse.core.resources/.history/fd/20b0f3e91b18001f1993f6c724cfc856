@@ -1,0 +1,26 @@
+package PizzaExample.PizzaExample;
+
+public class Pizza {
+	
+	private int price;
+	private boolean veg;
+	
+	public Pizza(Boolean veg)
+	{
+		if(veg == true)
+		{
+			this.price = 300;
+		}
+		else
+		{
+			this.price = 400;
+		}
+	}
+	
+	public void getPizzaPrice()
+	{
+		System.out.println(this.price);
+	}
+	
+
+}

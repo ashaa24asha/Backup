@@ -1,0 +1,30 @@
+package com.stl.app.restApi.Service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.stl.app.restApi.model.Address;
+import com.stl.app.restApi.model.User;
+
+public class UserService {
+	@Autowired
+    private UserRepo userRepository;
+    
+    public User createUserWithAddress() {
+        User user = new User();
+        Address permanentAddress = new Address();
+        permanentAddress.setHouseNumber(123);
+        permanentAddress.setRoad("Main Street");
+        permanentAddress.setCity("Your City");
+        permanentAddress.setState("Your State");
+        permanentAddress.setPincode(560018);
+        user.setPermanentAddress(permanentAddress);
+        
+        // Additional user properties can be set here if needed
+        user.setFirstName("John");
+        user.setLastName("Doe");
+        user.setOccupation("Engineer");
+        user.setAge(30);
+        
+        return userRepository.save(user);
+    }
+}
